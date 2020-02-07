@@ -105,27 +105,19 @@ namespace XInARow
             var tileRow = getTileRow(tileLastPlayed);
             var tileCol = getTileCol(tileLastPlayed);
 
-            bool result = getRowArray(tileRow, tileLastPlayed);
-
-            if (result)
-            {
-                return true;
-            }
-
-            return false;
+            return getRowArray(tileRow, tileLastPlayed);
         }
 
         private bool getRowArray(int row, PictureBox tile)
         {
-            String[] temp = new String[10]; // array of the rows values [x, o, n, x, x, x, o, n, o, n]
+            String[] temp = new String[gridSize]; // to hold array of the rows values [x, o, n, x, x, x, o, n, o, n]
             int count = 0;
 
             for(var i = 0; i < gridSize; i++) // gridSize = 10
             {
-
-                if ((String)tile.Tag == "")
+                if (currentStateOfBoard[row, i] != "X" && currentStateOfBoard[row, i] != "O")
                 {
-                    temp[i] = "n";
+                    temp[i] = "N";
                 }
                 else
                 {
@@ -135,10 +127,6 @@ namespace XInARow
             
             for(var i = 0; i < temp.Length; i++)
             {
-                if(count == maxInARow)
-                {
-                    return true;
-                }
                 if(temp[i] == (String)tile.Tag)
                 {
                     count++;
@@ -147,8 +135,12 @@ namespace XInARow
                 {
                     count = 0;
                 }
-            }
 
+                if (count == maxInARow)
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
@@ -158,14 +150,14 @@ namespace XInARow
         {
             PictureBox[] arrayOfTiles = allTiles.ToArray();
             int tileIndex = Array.IndexOf(arrayOfTiles, tile);
-            return tileIndex / 10;            
+            return tileIndex / gridSize;            
         }
 
         private int getTileCol(PictureBox tile)
         {
             PictureBox[] arrayOfTiles = allTiles.ToArray();
             int tileIndex = Array.IndexOf(arrayOfTiles, tile);
-            return tileIndex % 10;
+            return tileIndex % gridSize;
         }
 
         private Array getCurrentState()
