@@ -25,29 +25,17 @@ namespace XInARow
         {
             InitializeComponent();
             allTiles = new List<PictureBox>();
-            createList();
             
-            /*foreach(var pb in Controls.OfType<PictureBox>())
+            foreach(var pb in tableLayoutPanel1.Controls.OfType<PictureBox>())
             {
                 if (pb.Name.StartsWith("pictureBox"))
                 {
                     allTiles.Add(pb);
                 }
-            }*/
+            }
+
         }
 
-        private void createList()
-        {
-            Control[] matches;
-            for(var i = 1; i <= 100; i++)
-            {
-                matches = this.Controls.Find("pictureBox" + i.ToString(), true);
-                if (matches.Length > 0 && matches[0] is PictureBox)
-                {
-                    allTiles.Add((PictureBox)matches[0]);
-                }
-            }
-        }
 
         private void playerChoosesTile(object sender, EventArgs e)
         {
@@ -85,10 +73,17 @@ namespace XInARow
                 tileToPlay.Image = Properties.Resources.o;
                 tileToPlay.Tag = "O";
 
-             /*   if (checkForWin())
-                {
+                /*   if (checkForWin())
+                   {
 
-                }*/
+                   }*/
+                if (thereIsADraw())
+                {
+                    MessageBox.Show("It's a draw");
+                    currentTurnLabel.Text = "Draw!";
+                    currentTurnImage.Image = null;
+                    return;
+                }
 
                 currentPlayer = "X";
                 currentTurnImage.Image = Properties.Resources.x;
@@ -102,6 +97,20 @@ namespace XInARow
         private bool checkForWin()
         {
             return true;
+        }
+
+        private int getTileRow(PictureBox tile)
+        {
+            PictureBox[] arrayOfTiles = allTiles.ToArray();
+            int tileIndex = Array.IndexOf(arrayOfTiles, tile);
+            return tileIndex / 10;            
+        }
+
+        private int getTileCol(PictureBox tile)
+        {
+            PictureBox[] arrayOfTiles = allTiles.ToArray();
+            int tileIndex = Array.IndexOf(arrayOfTiles, tile);
+            return tileIndex % 10;
         }
 
         private bool thereIsADraw()
