@@ -106,11 +106,49 @@ namespace XInARow
 
         }
 
+        private bool getRowArray(Byte row, PictureBox tile)
+        {
+            String[] temp = new String[10]; // array of the rows values [x, o, n, x, x, x, o, n, o, n]
+            int count = 0;
+
+            for(var i = 0; i < gridSize; i++)
+            {
+                if((String)tile.Tag == null)
+                {
+                    temp[i] = "n";
+                }
+                else
+                {
+                    temp[i] = currentStateOfBoard[row, i];
+                };
+            }
+            
+            for(var i = 0; i < temp.Length; i++)
+            {
+                if(count == maxInARow)
+                {
+                    return true;
+                }
+                if(temp[i] == (String)tile.Tag)
+                {
+                    count++;
+                }
+                else if(temp[i] != (String)tile.Tag)
+                {
+                    count = 0;
+                }
+            }
+
+            return false;
+        }
+
+  
+
         private int getTileRow(PictureBox tile)
         {
             PictureBox[] arrayOfTiles = allTiles.ToArray();
             int tileIndex = Array.IndexOf(arrayOfTiles, tile);
-            return tileIndex / 10;            
+            return (tileIndex / 10) + 1;            
         }
 
         private int getTileCol(PictureBox tile)
