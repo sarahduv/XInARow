@@ -42,6 +42,7 @@ namespace XInARow
 
         private void playerChoosesTile(object sender, EventArgs e)
         {
+            Debug.WriteLine("current:" + currentStateOfBoard[1, 1]);
             if (hasWon || draw)
             {
                 MessageBox.Show("Reset the game");
@@ -55,10 +56,10 @@ namespace XInARow
                 tileToPlay.Image = Properties.Resources.x;
                 tileToPlay.Tag = "X";
 
-                /*if (checkForWin(tileToPlay))
+                if (checkForWin(tileToPlay))
                 {
-
-                }*/
+                    MessageBox.Show("Win: " + tileToPlay.Tag);
+                }
 
                 if (thereIsADraw())
                 {
@@ -76,10 +77,11 @@ namespace XInARow
                 tileToPlay.Image = Properties.Resources.o;
                 tileToPlay.Tag = "O";
 
-                /*   if (checkForWin(tileToPlayer))
-                   {
+                if (checkForWin(tileToPlay))
+                {
+                    MessageBox.Show("Win: " + tileToPlay.Tag);
+                }
 
-                   }*/
                 if (thereIsADraw())
                 {
                     MessageBox.Show("It's a draw");
@@ -97,23 +99,31 @@ namespace XInARow
             }
         }
 
-        private void checkForWin(PictureBox tileLastPlayed)
+        private bool checkForWin(PictureBox tileLastPlayed)
         {
             var currentState = getCurrentState();
             var tileRow = getTileRow(tileLastPlayed);
             var tileCol = getTileCol(tileLastPlayed);
 
+            bool result = getRowArray(tileRow, tileLastPlayed);
 
+            if (result)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        private bool getRowArray(Byte row, PictureBox tile)
+        private bool getRowArray(int row, PictureBox tile)
         {
             String[] temp = new String[10]; // array of the rows values [x, o, n, x, x, x, o, n, o, n]
             int count = 0;
 
-            for(var i = 0; i < gridSize; i++)
+            for(var i = 0; i < gridSize; i++) // gridSize = 10
             {
-                if((String)tile.Tag == null)
+
+                if ((String)tile.Tag == "")
                 {
                     temp[i] = "n";
                 }
@@ -148,7 +158,7 @@ namespace XInARow
         {
             PictureBox[] arrayOfTiles = allTiles.ToArray();
             int tileIndex = Array.IndexOf(arrayOfTiles, tile);
-            return (tileIndex / 10) + 1;            
+            return tileIndex / 10;            
         }
 
         private int getTileCol(PictureBox tile)
@@ -177,6 +187,7 @@ namespace XInARow
                     col++;
                 }
             }
+
             return currentStateOfBoard;
         }
 
