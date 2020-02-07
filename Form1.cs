@@ -101,7 +101,7 @@ namespace XInARow
 
         private bool checkForWin(PictureBox tileLastPlayed)
         {
-            var currentState = getCurrentState();
+            getCurrentState();
             var tileRow = getTileRow(tileLastPlayed);
             var tileCol = getTileCol(tileLastPlayed);
 
@@ -110,28 +110,28 @@ namespace XInARow
 
         private bool getRowArray(int row, PictureBox tile)
         {
-            String[] temp = new String[gridSize]; // to hold array of the rows values [x, o, n, x, x, x, o, n, o, n]
+            bool[] temp = new bool[gridSize]; // to hold array of the rows values [x, o, n, x, x, x, o, n, o, n]
             int count = 0;
 
             for(var i = 0; i < gridSize; i++) // gridSize = 10
             {
                 if (currentStateOfBoard[row, i] != "X" && currentStateOfBoard[row, i] != "O")
                 {
-                    temp[i] = "N";
+                    temp[i] = false;
                 }
                 else
                 {
-                    temp[i] = currentStateOfBoard[row, i];
+                    temp[i] = true;
                 };
             }
             
             for(var i = 0; i < temp.Length; i++)
             {
-                if(temp[i] == (String)tile.Tag)
+                if(temp[i] == true)
                 {
                     count++;
                 }
-                else if(temp[i] != (String)tile.Tag)
+                else if(temp[i] != false)
                 {
                     count = 0;
                 }
@@ -160,7 +160,7 @@ namespace XInARow
             return tileIndex % gridSize;
         }
 
-        private Array getCurrentState()
+        private void getCurrentState()
         {
             int row = 0;
             int col = 0;
@@ -179,8 +179,6 @@ namespace XInARow
                     col++;
                 }
             }
-
-            return currentStateOfBoard;
         }
 
         private bool thereIsADraw()
