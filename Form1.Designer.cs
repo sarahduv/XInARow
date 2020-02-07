@@ -129,7 +129,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.currentTurnLabel = new System.Windows.Forms.Label();
             this.currentTurnImage = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -255,6 +255,7 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox99, 8, 9);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox98, 7, 9);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox97, 6, 9);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox96, 5, 9);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox95, 4, 9);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox94, 3, 9);
@@ -350,7 +351,6 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 21);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
@@ -373,6 +373,7 @@
             this.pictureBox100.Location = new System.Drawing.Point(544, 526);
             this.pictureBox100.Name = "pictureBox100";
             this.pictureBox100.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox100.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox100.TabIndex = 99;
             this.pictureBox100.TabStop = false;
             this.pictureBox100.Click += new System.EventHandler(this.playerChoosesTile);
@@ -382,6 +383,7 @@
             this.pictureBox99.Location = new System.Drawing.Point(484, 526);
             this.pictureBox99.Name = "pictureBox99";
             this.pictureBox99.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox99.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox99.TabIndex = 98;
             this.pictureBox99.TabStop = false;
             this.pictureBox99.Click += new System.EventHandler(this.playerChoosesTile);
@@ -391,6 +393,7 @@
             this.pictureBox98.Location = new System.Drawing.Point(424, 526);
             this.pictureBox98.Name = "pictureBox98";
             this.pictureBox98.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox98.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox98.TabIndex = 97;
             this.pictureBox98.TabStop = false;
             this.pictureBox98.Click += new System.EventHandler(this.playerChoosesTile);
@@ -400,6 +403,7 @@
             this.pictureBox97.Location = new System.Drawing.Point(364, 526);
             this.pictureBox97.Name = "pictureBox97";
             this.pictureBox97.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox97.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox97.TabIndex = 96;
             this.pictureBox97.TabStop = false;
             this.pictureBox97.Click += new System.EventHandler(this.playerChoosesTile);
@@ -409,6 +413,7 @@
             this.pictureBox96.Location = new System.Drawing.Point(304, 526);
             this.pictureBox96.Name = "pictureBox96";
             this.pictureBox96.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox96.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox96.TabIndex = 95;
             this.pictureBox96.TabStop = false;
             this.pictureBox96.Click += new System.EventHandler(this.playerChoosesTile);
@@ -418,6 +423,7 @@
             this.pictureBox95.Location = new System.Drawing.Point(244, 526);
             this.pictureBox95.Name = "pictureBox95";
             this.pictureBox95.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox95.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox95.TabIndex = 94;
             this.pictureBox95.TabStop = false;
             this.pictureBox95.Click += new System.EventHandler(this.playerChoosesTile);
@@ -427,6 +433,7 @@
             this.pictureBox94.Location = new System.Drawing.Point(184, 526);
             this.pictureBox94.Name = "pictureBox94";
             this.pictureBox94.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox94.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox94.TabIndex = 93;
             this.pictureBox94.TabStop = false;
             this.pictureBox94.Click += new System.EventHandler(this.playerChoosesTile);
@@ -436,6 +443,7 @@
             this.pictureBox93.Location = new System.Drawing.Point(124, 526);
             this.pictureBox93.Name = "pictureBox93";
             this.pictureBox93.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox93.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox93.TabIndex = 92;
             this.pictureBox93.TabStop = false;
             this.pictureBox93.Click += new System.EventHandler(this.playerChoosesTile);
@@ -445,6 +453,7 @@
             this.pictureBox92.Location = new System.Drawing.Point(64, 526);
             this.pictureBox92.Name = "pictureBox92";
             this.pictureBox92.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox92.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox92.TabIndex = 91;
             this.pictureBox92.TabStop = false;
             this.pictureBox92.Click += new System.EventHandler(this.playerChoosesTile);
@@ -454,6 +463,7 @@
             this.pictureBox91.Location = new System.Drawing.Point(4, 526);
             this.pictureBox91.Name = "pictureBox91";
             this.pictureBox91.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox91.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox91.TabIndex = 90;
             this.pictureBox91.TabStop = false;
             this.pictureBox91.Click += new System.EventHandler(this.playerChoosesTile);
@@ -463,6 +473,7 @@
             this.pictureBox90.Location = new System.Drawing.Point(544, 468);
             this.pictureBox90.Name = "pictureBox90";
             this.pictureBox90.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox90.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox90.TabIndex = 89;
             this.pictureBox90.TabStop = false;
             this.pictureBox90.Click += new System.EventHandler(this.playerChoosesTile);
@@ -472,6 +483,7 @@
             this.pictureBox89.Location = new System.Drawing.Point(484, 468);
             this.pictureBox89.Name = "pictureBox89";
             this.pictureBox89.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox89.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox89.TabIndex = 88;
             this.pictureBox89.TabStop = false;
             this.pictureBox89.Click += new System.EventHandler(this.playerChoosesTile);
@@ -481,6 +493,7 @@
             this.pictureBox88.Location = new System.Drawing.Point(424, 468);
             this.pictureBox88.Name = "pictureBox88";
             this.pictureBox88.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox88.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox88.TabIndex = 87;
             this.pictureBox88.TabStop = false;
             this.pictureBox88.Click += new System.EventHandler(this.playerChoosesTile);
@@ -490,6 +503,7 @@
             this.pictureBox87.Location = new System.Drawing.Point(364, 468);
             this.pictureBox87.Name = "pictureBox87";
             this.pictureBox87.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox87.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox87.TabIndex = 86;
             this.pictureBox87.TabStop = false;
             this.pictureBox87.Click += new System.EventHandler(this.playerChoosesTile);
@@ -499,6 +513,7 @@
             this.pictureBox86.Location = new System.Drawing.Point(304, 468);
             this.pictureBox86.Name = "pictureBox86";
             this.pictureBox86.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox86.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox86.TabIndex = 85;
             this.pictureBox86.TabStop = false;
             this.pictureBox86.Click += new System.EventHandler(this.playerChoosesTile);
@@ -508,6 +523,7 @@
             this.pictureBox85.Location = new System.Drawing.Point(244, 468);
             this.pictureBox85.Name = "pictureBox85";
             this.pictureBox85.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox85.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox85.TabIndex = 84;
             this.pictureBox85.TabStop = false;
             this.pictureBox85.Click += new System.EventHandler(this.playerChoosesTile);
@@ -517,6 +533,7 @@
             this.pictureBox84.Location = new System.Drawing.Point(184, 468);
             this.pictureBox84.Name = "pictureBox84";
             this.pictureBox84.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox84.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox84.TabIndex = 83;
             this.pictureBox84.TabStop = false;
             this.pictureBox84.Click += new System.EventHandler(this.playerChoosesTile);
@@ -526,6 +543,7 @@
             this.pictureBox83.Location = new System.Drawing.Point(124, 468);
             this.pictureBox83.Name = "pictureBox83";
             this.pictureBox83.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox83.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox83.TabIndex = 82;
             this.pictureBox83.TabStop = false;
             this.pictureBox83.Click += new System.EventHandler(this.playerChoosesTile);
@@ -535,6 +553,7 @@
             this.pictureBox82.Location = new System.Drawing.Point(64, 468);
             this.pictureBox82.Name = "pictureBox82";
             this.pictureBox82.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox82.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox82.TabIndex = 81;
             this.pictureBox82.TabStop = false;
             this.pictureBox82.Click += new System.EventHandler(this.playerChoosesTile);
@@ -544,6 +563,7 @@
             this.pictureBox81.Location = new System.Drawing.Point(4, 468);
             this.pictureBox81.Name = "pictureBox81";
             this.pictureBox81.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox81.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox81.TabIndex = 80;
             this.pictureBox81.TabStop = false;
             this.pictureBox81.Click += new System.EventHandler(this.playerChoosesTile);
@@ -553,6 +573,7 @@
             this.pictureBox80.Location = new System.Drawing.Point(544, 410);
             this.pictureBox80.Name = "pictureBox80";
             this.pictureBox80.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox80.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox80.TabIndex = 79;
             this.pictureBox80.TabStop = false;
             this.pictureBox80.Click += new System.EventHandler(this.playerChoosesTile);
@@ -562,6 +583,7 @@
             this.pictureBox79.Location = new System.Drawing.Point(484, 410);
             this.pictureBox79.Name = "pictureBox79";
             this.pictureBox79.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox79.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox79.TabIndex = 78;
             this.pictureBox79.TabStop = false;
             this.pictureBox79.Click += new System.EventHandler(this.playerChoosesTile);
@@ -571,6 +593,7 @@
             this.pictureBox78.Location = new System.Drawing.Point(424, 410);
             this.pictureBox78.Name = "pictureBox78";
             this.pictureBox78.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox78.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox78.TabIndex = 77;
             this.pictureBox78.TabStop = false;
             this.pictureBox78.Click += new System.EventHandler(this.playerChoosesTile);
@@ -580,6 +603,7 @@
             this.pictureBox77.Location = new System.Drawing.Point(364, 410);
             this.pictureBox77.Name = "pictureBox77";
             this.pictureBox77.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox77.TabIndex = 76;
             this.pictureBox77.TabStop = false;
             this.pictureBox77.Click += new System.EventHandler(this.playerChoosesTile);
@@ -589,6 +613,7 @@
             this.pictureBox76.Location = new System.Drawing.Point(304, 410);
             this.pictureBox76.Name = "pictureBox76";
             this.pictureBox76.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox76.TabIndex = 75;
             this.pictureBox76.TabStop = false;
             this.pictureBox76.Click += new System.EventHandler(this.playerChoosesTile);
@@ -598,6 +623,7 @@
             this.pictureBox75.Location = new System.Drawing.Point(244, 410);
             this.pictureBox75.Name = "pictureBox75";
             this.pictureBox75.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox75.TabIndex = 74;
             this.pictureBox75.TabStop = false;
             this.pictureBox75.Click += new System.EventHandler(this.playerChoosesTile);
@@ -607,6 +633,7 @@
             this.pictureBox74.Location = new System.Drawing.Point(184, 410);
             this.pictureBox74.Name = "pictureBox74";
             this.pictureBox74.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox74.TabIndex = 73;
             this.pictureBox74.TabStop = false;
             this.pictureBox74.Click += new System.EventHandler(this.playerChoosesTile);
@@ -616,6 +643,7 @@
             this.pictureBox73.Location = new System.Drawing.Point(124, 410);
             this.pictureBox73.Name = "pictureBox73";
             this.pictureBox73.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox73.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox73.TabIndex = 72;
             this.pictureBox73.TabStop = false;
             this.pictureBox73.Click += new System.EventHandler(this.playerChoosesTile);
@@ -625,6 +653,7 @@
             this.pictureBox72.Location = new System.Drawing.Point(64, 410);
             this.pictureBox72.Name = "pictureBox72";
             this.pictureBox72.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox72.TabIndex = 71;
             this.pictureBox72.TabStop = false;
             this.pictureBox72.Click += new System.EventHandler(this.playerChoosesTile);
@@ -634,6 +663,7 @@
             this.pictureBox71.Location = new System.Drawing.Point(4, 410);
             this.pictureBox71.Name = "pictureBox71";
             this.pictureBox71.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox71.TabIndex = 70;
             this.pictureBox71.TabStop = false;
             this.pictureBox71.Click += new System.EventHandler(this.playerChoosesTile);
@@ -643,6 +673,7 @@
             this.pictureBox70.Location = new System.Drawing.Point(544, 352);
             this.pictureBox70.Name = "pictureBox70";
             this.pictureBox70.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox70.TabIndex = 69;
             this.pictureBox70.TabStop = false;
             this.pictureBox70.Click += new System.EventHandler(this.playerChoosesTile);
@@ -652,6 +683,7 @@
             this.pictureBox69.Location = new System.Drawing.Point(484, 352);
             this.pictureBox69.Name = "pictureBox69";
             this.pictureBox69.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox69.TabIndex = 68;
             this.pictureBox69.TabStop = false;
             this.pictureBox69.Click += new System.EventHandler(this.playerChoosesTile);
@@ -661,6 +693,7 @@
             this.pictureBox68.Location = new System.Drawing.Point(424, 352);
             this.pictureBox68.Name = "pictureBox68";
             this.pictureBox68.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox68.TabIndex = 67;
             this.pictureBox68.TabStop = false;
             this.pictureBox68.Click += new System.EventHandler(this.playerChoosesTile);
@@ -670,6 +703,7 @@
             this.pictureBox67.Location = new System.Drawing.Point(364, 352);
             this.pictureBox67.Name = "pictureBox67";
             this.pictureBox67.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox67.TabIndex = 66;
             this.pictureBox67.TabStop = false;
             this.pictureBox67.Click += new System.EventHandler(this.playerChoosesTile);
@@ -679,6 +713,7 @@
             this.pictureBox66.Location = new System.Drawing.Point(304, 352);
             this.pictureBox66.Name = "pictureBox66";
             this.pictureBox66.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox66.TabIndex = 65;
             this.pictureBox66.TabStop = false;
             this.pictureBox66.Click += new System.EventHandler(this.playerChoosesTile);
@@ -688,6 +723,7 @@
             this.pictureBox65.Location = new System.Drawing.Point(244, 352);
             this.pictureBox65.Name = "pictureBox65";
             this.pictureBox65.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox65.TabIndex = 64;
             this.pictureBox65.TabStop = false;
             this.pictureBox65.Click += new System.EventHandler(this.playerChoosesTile);
@@ -697,6 +733,7 @@
             this.pictureBox64.Location = new System.Drawing.Point(184, 352);
             this.pictureBox64.Name = "pictureBox64";
             this.pictureBox64.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox64.TabIndex = 63;
             this.pictureBox64.TabStop = false;
             this.pictureBox64.Click += new System.EventHandler(this.playerChoosesTile);
@@ -706,6 +743,7 @@
             this.pictureBox63.Location = new System.Drawing.Point(124, 352);
             this.pictureBox63.Name = "pictureBox63";
             this.pictureBox63.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox63.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox63.TabIndex = 62;
             this.pictureBox63.TabStop = false;
             this.pictureBox63.Click += new System.EventHandler(this.playerChoosesTile);
@@ -715,6 +753,7 @@
             this.pictureBox62.Location = new System.Drawing.Point(64, 352);
             this.pictureBox62.Name = "pictureBox62";
             this.pictureBox62.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox62.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox62.TabIndex = 61;
             this.pictureBox62.TabStop = false;
             this.pictureBox62.Click += new System.EventHandler(this.playerChoosesTile);
@@ -724,6 +763,7 @@
             this.pictureBox61.Location = new System.Drawing.Point(4, 352);
             this.pictureBox61.Name = "pictureBox61";
             this.pictureBox61.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox61.TabIndex = 60;
             this.pictureBox61.TabStop = false;
             this.pictureBox61.Click += new System.EventHandler(this.playerChoosesTile);
@@ -733,6 +773,7 @@
             this.pictureBox60.Location = new System.Drawing.Point(544, 294);
             this.pictureBox60.Name = "pictureBox60";
             this.pictureBox60.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox60.TabIndex = 59;
             this.pictureBox60.TabStop = false;
             this.pictureBox60.Click += new System.EventHandler(this.playerChoosesTile);
@@ -742,6 +783,7 @@
             this.pictureBox59.Location = new System.Drawing.Point(484, 294);
             this.pictureBox59.Name = "pictureBox59";
             this.pictureBox59.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox59.TabIndex = 58;
             this.pictureBox59.TabStop = false;
             this.pictureBox59.Click += new System.EventHandler(this.playerChoosesTile);
@@ -751,6 +793,7 @@
             this.pictureBox58.Location = new System.Drawing.Point(424, 294);
             this.pictureBox58.Name = "pictureBox58";
             this.pictureBox58.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox58.TabIndex = 57;
             this.pictureBox58.TabStop = false;
             this.pictureBox58.Click += new System.EventHandler(this.playerChoosesTile);
@@ -760,6 +803,7 @@
             this.pictureBox57.Location = new System.Drawing.Point(364, 294);
             this.pictureBox57.Name = "pictureBox57";
             this.pictureBox57.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox57.TabIndex = 56;
             this.pictureBox57.TabStop = false;
             this.pictureBox57.Click += new System.EventHandler(this.playerChoosesTile);
@@ -769,6 +813,7 @@
             this.pictureBox56.Location = new System.Drawing.Point(304, 294);
             this.pictureBox56.Name = "pictureBox56";
             this.pictureBox56.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox56.TabIndex = 55;
             this.pictureBox56.TabStop = false;
             this.pictureBox56.Click += new System.EventHandler(this.playerChoosesTile);
@@ -778,6 +823,7 @@
             this.pictureBox55.Location = new System.Drawing.Point(244, 294);
             this.pictureBox55.Name = "pictureBox55";
             this.pictureBox55.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox55.TabIndex = 54;
             this.pictureBox55.TabStop = false;
             this.pictureBox55.Click += new System.EventHandler(this.playerChoosesTile);
@@ -787,6 +833,7 @@
             this.pictureBox54.Location = new System.Drawing.Point(184, 294);
             this.pictureBox54.Name = "pictureBox54";
             this.pictureBox54.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox54.TabIndex = 53;
             this.pictureBox54.TabStop = false;
             this.pictureBox54.Click += new System.EventHandler(this.playerChoosesTile);
@@ -796,6 +843,7 @@
             this.pictureBox53.Location = new System.Drawing.Point(124, 294);
             this.pictureBox53.Name = "pictureBox53";
             this.pictureBox53.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox53.TabIndex = 52;
             this.pictureBox53.TabStop = false;
             this.pictureBox53.Click += new System.EventHandler(this.playerChoosesTile);
@@ -805,6 +853,7 @@
             this.pictureBox52.Location = new System.Drawing.Point(64, 294);
             this.pictureBox52.Name = "pictureBox52";
             this.pictureBox52.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox52.TabIndex = 51;
             this.pictureBox52.TabStop = false;
             this.pictureBox52.Click += new System.EventHandler(this.playerChoosesTile);
@@ -814,6 +863,7 @@
             this.pictureBox51.Location = new System.Drawing.Point(4, 294);
             this.pictureBox51.Name = "pictureBox51";
             this.pictureBox51.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox51.TabIndex = 50;
             this.pictureBox51.TabStop = false;
             this.pictureBox51.Click += new System.EventHandler(this.playerChoosesTile);
@@ -823,6 +873,7 @@
             this.pictureBox50.Location = new System.Drawing.Point(544, 236);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox50.TabIndex = 49;
             this.pictureBox50.TabStop = false;
             this.pictureBox50.Click += new System.EventHandler(this.playerChoosesTile);
@@ -832,6 +883,7 @@
             this.pictureBox49.Location = new System.Drawing.Point(484, 236);
             this.pictureBox49.Name = "pictureBox49";
             this.pictureBox49.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox49.TabIndex = 48;
             this.pictureBox49.TabStop = false;
             this.pictureBox49.Click += new System.EventHandler(this.playerChoosesTile);
@@ -841,6 +893,7 @@
             this.pictureBox48.Location = new System.Drawing.Point(424, 236);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox48.TabIndex = 47;
             this.pictureBox48.TabStop = false;
             this.pictureBox48.Click += new System.EventHandler(this.playerChoosesTile);
@@ -850,6 +903,7 @@
             this.pictureBox47.Location = new System.Drawing.Point(364, 236);
             this.pictureBox47.Name = "pictureBox47";
             this.pictureBox47.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox47.TabIndex = 46;
             this.pictureBox47.TabStop = false;
             this.pictureBox47.Click += new System.EventHandler(this.playerChoosesTile);
@@ -859,6 +913,7 @@
             this.pictureBox46.Location = new System.Drawing.Point(304, 236);
             this.pictureBox46.Name = "pictureBox46";
             this.pictureBox46.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox46.TabIndex = 45;
             this.pictureBox46.TabStop = false;
             this.pictureBox46.Click += new System.EventHandler(this.playerChoosesTile);
@@ -868,6 +923,7 @@
             this.pictureBox45.Location = new System.Drawing.Point(244, 236);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox45.TabIndex = 44;
             this.pictureBox45.TabStop = false;
             this.pictureBox45.Click += new System.EventHandler(this.playerChoosesTile);
@@ -877,6 +933,7 @@
             this.pictureBox44.Location = new System.Drawing.Point(184, 236);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox44.TabIndex = 43;
             this.pictureBox44.TabStop = false;
             this.pictureBox44.Click += new System.EventHandler(this.playerChoosesTile);
@@ -886,6 +943,7 @@
             this.pictureBox43.Location = new System.Drawing.Point(124, 236);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox43.TabIndex = 42;
             this.pictureBox43.TabStop = false;
             this.pictureBox43.Click += new System.EventHandler(this.playerChoosesTile);
@@ -895,6 +953,7 @@
             this.pictureBox42.Location = new System.Drawing.Point(64, 236);
             this.pictureBox42.Name = "pictureBox42";
             this.pictureBox42.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox42.TabIndex = 41;
             this.pictureBox42.TabStop = false;
             this.pictureBox42.Click += new System.EventHandler(this.playerChoosesTile);
@@ -904,6 +963,7 @@
             this.pictureBox41.Location = new System.Drawing.Point(4, 236);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox41.TabIndex = 40;
             this.pictureBox41.TabStop = false;
             this.pictureBox41.Click += new System.EventHandler(this.playerChoosesTile);
@@ -913,6 +973,7 @@
             this.pictureBox40.Location = new System.Drawing.Point(544, 178);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox40.TabIndex = 39;
             this.pictureBox40.TabStop = false;
             this.pictureBox40.Click += new System.EventHandler(this.playerChoosesTile);
@@ -922,6 +983,7 @@
             this.pictureBox39.Location = new System.Drawing.Point(484, 178);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox39.TabIndex = 38;
             this.pictureBox39.TabStop = false;
             this.pictureBox39.Click += new System.EventHandler(this.playerChoosesTile);
@@ -931,6 +993,7 @@
             this.pictureBox38.Location = new System.Drawing.Point(424, 178);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox38.TabIndex = 37;
             this.pictureBox38.TabStop = false;
             this.pictureBox38.Click += new System.EventHandler(this.playerChoosesTile);
@@ -940,6 +1003,7 @@
             this.pictureBox37.Location = new System.Drawing.Point(364, 178);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox37.TabIndex = 36;
             this.pictureBox37.TabStop = false;
             this.pictureBox37.Click += new System.EventHandler(this.playerChoosesTile);
@@ -949,6 +1013,7 @@
             this.pictureBox36.Location = new System.Drawing.Point(304, 178);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox36.TabIndex = 35;
             this.pictureBox36.TabStop = false;
             this.pictureBox36.Click += new System.EventHandler(this.playerChoosesTile);
@@ -958,6 +1023,7 @@
             this.pictureBox35.Location = new System.Drawing.Point(244, 178);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox35.TabIndex = 34;
             this.pictureBox35.TabStop = false;
             this.pictureBox35.Click += new System.EventHandler(this.playerChoosesTile);
@@ -967,6 +1033,7 @@
             this.pictureBox34.Location = new System.Drawing.Point(184, 178);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox34.TabIndex = 33;
             this.pictureBox34.TabStop = false;
             this.pictureBox34.Click += new System.EventHandler(this.playerChoosesTile);
@@ -976,6 +1043,7 @@
             this.pictureBox33.Location = new System.Drawing.Point(124, 178);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox33.TabIndex = 32;
             this.pictureBox33.TabStop = false;
             this.pictureBox33.Click += new System.EventHandler(this.playerChoosesTile);
@@ -985,6 +1053,7 @@
             this.pictureBox32.Location = new System.Drawing.Point(64, 178);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox32.TabIndex = 31;
             this.pictureBox32.TabStop = false;
             this.pictureBox32.Click += new System.EventHandler(this.playerChoosesTile);
@@ -994,6 +1063,7 @@
             this.pictureBox31.Location = new System.Drawing.Point(4, 178);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 30;
             this.pictureBox31.TabStop = false;
             this.pictureBox31.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1003,6 +1073,7 @@
             this.pictureBox30.Location = new System.Drawing.Point(544, 120);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 29;
             this.pictureBox30.TabStop = false;
             this.pictureBox30.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1012,6 +1083,7 @@
             this.pictureBox29.Location = new System.Drawing.Point(484, 120);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox29.TabIndex = 28;
             this.pictureBox29.TabStop = false;
             this.pictureBox29.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1021,6 +1093,7 @@
             this.pictureBox28.Location = new System.Drawing.Point(424, 120);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 27;
             this.pictureBox28.TabStop = false;
             this.pictureBox28.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1030,6 +1103,7 @@
             this.pictureBox27.Location = new System.Drawing.Point(364, 120);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 26;
             this.pictureBox27.TabStop = false;
             this.pictureBox27.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1039,6 +1113,7 @@
             this.pictureBox26.Location = new System.Drawing.Point(304, 120);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox26.TabIndex = 25;
             this.pictureBox26.TabStop = false;
             this.pictureBox26.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1048,6 +1123,7 @@
             this.pictureBox25.Location = new System.Drawing.Point(244, 120);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox25.TabIndex = 24;
             this.pictureBox25.TabStop = false;
             this.pictureBox25.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1057,6 +1133,7 @@
             this.pictureBox24.Location = new System.Drawing.Point(184, 120);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox24.TabIndex = 23;
             this.pictureBox24.TabStop = false;
             this.pictureBox24.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1066,6 +1143,7 @@
             this.pictureBox23.Location = new System.Drawing.Point(124, 120);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox23.TabIndex = 22;
             this.pictureBox23.TabStop = false;
             this.pictureBox23.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1075,6 +1153,7 @@
             this.pictureBox22.Location = new System.Drawing.Point(64, 120);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 21;
             this.pictureBox22.TabStop = false;
             this.pictureBox22.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1084,6 +1163,7 @@
             this.pictureBox21.Location = new System.Drawing.Point(4, 120);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 20;
             this.pictureBox21.TabStop = false;
             this.pictureBox21.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1093,6 +1173,7 @@
             this.pictureBox20.Location = new System.Drawing.Point(544, 62);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 19;
             this.pictureBox20.TabStop = false;
             this.pictureBox20.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1102,6 +1183,7 @@
             this.pictureBox19.Location = new System.Drawing.Point(484, 62);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 18;
             this.pictureBox19.TabStop = false;
             this.pictureBox19.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1111,6 +1193,7 @@
             this.pictureBox18.Location = new System.Drawing.Point(424, 62);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 17;
             this.pictureBox18.TabStop = false;
             this.pictureBox18.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1120,6 +1203,7 @@
             this.pictureBox17.Location = new System.Drawing.Point(364, 62);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 16;
             this.pictureBox17.TabStop = false;
             this.pictureBox17.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1129,6 +1213,7 @@
             this.pictureBox16.Location = new System.Drawing.Point(304, 62);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 15;
             this.pictureBox16.TabStop = false;
             this.pictureBox16.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1138,6 +1223,7 @@
             this.pictureBox15.Location = new System.Drawing.Point(244, 62);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 14;
             this.pictureBox15.TabStop = false;
             this.pictureBox15.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1147,6 +1233,7 @@
             this.pictureBox14.Location = new System.Drawing.Point(184, 62);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 13;
             this.pictureBox14.TabStop = false;
             this.pictureBox14.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1156,6 +1243,7 @@
             this.pictureBox13.Location = new System.Drawing.Point(124, 62);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 12;
             this.pictureBox13.TabStop = false;
             this.pictureBox13.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1165,6 +1253,7 @@
             this.pictureBox12.Location = new System.Drawing.Point(64, 62);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 11;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1174,6 +1263,7 @@
             this.pictureBox11.Location = new System.Drawing.Point(4, 62);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 10;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1183,6 +1273,7 @@
             this.pictureBox10.Location = new System.Drawing.Point(544, 4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 9;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1192,6 +1283,7 @@
             this.pictureBox9.Location = new System.Drawing.Point(484, 4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 8;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1201,6 +1293,7 @@
             this.pictureBox8.Location = new System.Drawing.Point(424, 4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1210,6 +1303,7 @@
             this.pictureBox7.Location = new System.Drawing.Point(364, 4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1219,6 +1313,7 @@
             this.pictureBox6.Location = new System.Drawing.Point(304, 4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1228,6 +1323,7 @@
             this.pictureBox5.Location = new System.Drawing.Point(244, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1237,6 +1333,7 @@
             this.pictureBox4.Location = new System.Drawing.Point(184, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1246,6 +1343,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(124, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1255,6 +1353,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(64, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.playerChoosesTile);
@@ -1264,18 +1363,20 @@
             this.pictureBox1.Location = new System.Drawing.Point(4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.playerChoosesTile);
             // 
-            // button1
+            // resetButton
             // 
-            this.button1.Location = new System.Drawing.Point(706, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Reset Board";
-            this.button1.UseVisualStyleBackColor = true;
+            this.resetButton.Location = new System.Drawing.Point(706, 199);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 1;
+            this.resetButton.Text = "Reset Board";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // currentTurnLabel
             // 
@@ -1305,7 +1406,7 @@
             this.ClientSize = new System.Drawing.Size(869, 643);
             this.Controls.Add(this.currentTurnImage);
             this.Controls.Add(this.currentTurnLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1519,7 +1620,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Label currentTurnLabel;
         private System.Windows.Forms.PictureBox currentTurnImage;
     }

@@ -1,0 +1,9 @@
+C:\Users\Sarah\codefellows\projects\XInARow\bin\Debug\XInARow.exe.config
+C:\Users\Sarah\codefellows\projects\XInARow\bin\Debug\XInARow.exe
+C:\Users\Sarah\codefellows\projects\XInARow\bin\Debug\XInARow.pdb
+C:\Users\Sarah\codefellows\projects\XInARow\obj\Debug\XInARow.csprojAssemblyReference.cache
+C:\Users\Sarah\codefellows\projects\XInARow\obj\Debug\XInARow.Form1.resources
+C:\Users\Sarah\codefellows\projects\XInARow\obj\Debug\XInARow.Properties.Resources.resources
+C:\Users\Sarah\codefellows\projects\XInARow\obj\Debug\XInARow.csproj.GenerateResource.cache
+C:\Users\Sarah\codefellows\projects\XInARow\obj\Debug\XInARow.exe
+C:\Users\Sarah\codefellows\projects\XInARow\obj\Debug\XInARow.pdb
