@@ -110,12 +110,12 @@ namespace XInARow
 
         private bool getRowArray(int row, PictureBox tile)
         {
-            bool[] temp = new bool[gridSize]; // to hold array of the rows values [x, o, n, x, x, x, o, n, o, n]
+            bool[] temp = new bool[gridSize]; // true's wil represent current player tag type
             int count = 0;
 
             for(var i = 0; i < gridSize; i++) // gridSize = 10
             {
-                if (currentStateOfBoard[row, i] != "X" && currentStateOfBoard[row, i] != "O")
+                if (currentStateOfBoard[row, i] != (String)tile.Tag)
                 {
                     temp[i] = false;
                 }
