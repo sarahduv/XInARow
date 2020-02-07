@@ -36,7 +36,7 @@ namespace XInARow
                 }
             }
 
-            currentStateOfBoard = new String[10, 10];
+            currentStateOfBoard = new String[gridSize, gridSize];
         }
 
 
@@ -105,33 +105,66 @@ namespace XInARow
             var tileRow = getTileRow(tileLastPlayed);
             var tileCol = getTileCol(tileLastPlayed);
 
-            return getRowArray(tileRow, tileLastPlayed);
+            bool rowWin = getResult(getRowArray(tileRow, tileLastPlayed));
+            bool colWin = getResult(getColArray(tileCol, tileLastPlayed));
+
+            if(rowWin || colWin)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        private bool getRowArray(int row, PictureBox tile)
+        private bool[] getRowArray(int row, PictureBox tile)
         {
-            bool[] temp = new bool[gridSize]; // true's will represent current player tag type
-            int count = 0;
+            bool[] rowArr = new bool[gridSize]; // true's will represent current player tag type
 
             for(var i = 0; i < gridSize; i++) // gridSize = 10
             {
                 if (currentStateOfBoard[row, i] != (String)tile.Tag)
                 {
-                    temp[i] = false;
+                    rowArr[i] = false;
                 }
                 else
                 {
-                    temp[i] = true;
+                    rowArr[i] = true;
                 };
             }
-            
-            for(var i = 0; i < temp.Length; i++)
+
+            return rowArr;
+        }
+
+        private bool[] getColArray(int col, PictureBox tile)
+        {
+            bool[] colArr = new bool[gridSize]; // true's will represent current player tag type
+
+            for (var i = 0; i < gridSize; i++) // gridSize = 10
             {
-                if(temp[i] == true)
+                if (currentStateOfBoard[i, col] != (String)tile.Tag)
+                {
+                    colArr[i] = false;
+                }
+                else
+                {
+                    colArr[i] = true;
+                };
+            }
+
+            return colArr;
+        }
+
+        private bool getResult(bool[] arr)
+        {
+            int count = 0;
+
+            for (var i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == true)
                 {
                     count++;
                 }
-                else if(temp[i] == false)
+                else if (arr[i] == false)
                 {
                     count = 0;
                 }
@@ -172,6 +205,7 @@ namespace XInARow
                     row++;
                     col = 0;
                     currentStateOfBoard[row, col] = (String)allTiles[tile].Tag;
+                    col++;
                 }
                 else
                 {
