@@ -110,7 +110,7 @@ namespace XInARow
 
         private bool getRowArray(int row, PictureBox tile)
         {
-            bool[] temp = new bool[gridSize]; // true's wil represent current player tag type
+            bool[] temp = new bool[gridSize]; // true's will represent current player tag type
             int count = 0;
 
             for(var i = 0; i < gridSize; i++) // gridSize = 10
@@ -131,7 +131,7 @@ namespace XInARow
                 {
                     count++;
                 }
-                else if(temp[i] != false)
+                else if(temp[i] == false)
                 {
                     count = 0;
                 }
