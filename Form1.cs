@@ -16,10 +16,12 @@ namespace XInARow
         public String currentPlayer = "X";
         public List<PictureBox> allTiles;
         public PictureBox[][] possibleWins;
+        public String[,] currentStateOfBoard;
         public String winningPlayer;
         public bool hasWon = false;
         public bool draw = false;
         public int maxInARow = 4;
+        public int gridSize = 10;
 
         public Form1()
         {
@@ -34,6 +36,7 @@ namespace XInARow
                 }
             }
 
+            currentStateOfBoard = new String[10, 10];
         }
 
 
@@ -52,7 +55,7 @@ namespace XInARow
                 tileToPlay.Image = Properties.Resources.x;
                 tileToPlay.Tag = "X";
 
-                /*if (checkForWin())
+                /*if (checkForWin(tileToPlay))
                 {
 
                 }*/
@@ -73,7 +76,7 @@ namespace XInARow
                 tileToPlay.Image = Properties.Resources.o;
                 tileToPlay.Tag = "O";
 
-                /*   if (checkForWin())
+                /*   if (checkForWin(tileToPlayer))
                    {
 
                    }*/
@@ -94,9 +97,13 @@ namespace XInARow
             }
         }
 
-        private bool checkForWin()
+        private void checkForWin(PictureBox tileLastPlayed)
         {
-            return true;
+            var currentState = getCurrentState();
+            var tileRow = getTileRow(tileLastPlayed);
+            var tileCol = getTileCol(tileLastPlayed);
+
+
         }
 
         private int getTileRow(PictureBox tile)
@@ -111,6 +118,28 @@ namespace XInARow
             PictureBox[] arrayOfTiles = allTiles.ToArray();
             int tileIndex = Array.IndexOf(arrayOfTiles, tile);
             return tileIndex % 10;
+        }
+
+        private Array getCurrentState()
+        {
+            int row = 0;
+            int col = 0;
+
+            for(var tile = 0; tile < allTiles.Count; tile++)
+            {
+                if(col >= gridSize) // gridSize = 10
+                {
+                    row++;
+                    col = 0;
+                    currentStateOfBoard[row, col] = (String)allTiles[tile].Tag;
+                }
+                else
+                {
+                    currentStateOfBoard[row, col] = (String)allTiles[tile].Tag;
+                    col++;
+                }
+            }
+            return currentStateOfBoard;
         }
 
         private bool thereIsADraw()
