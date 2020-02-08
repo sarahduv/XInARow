@@ -107,8 +107,9 @@ namespace XInARow
 
             bool rowWin = getResult(getRowArray(tileRow, tileLastPlayed));
             bool colWin = getResult(getColArray(tileCol, tileLastPlayed));
+            bool diagWin = getResult(getDiagArray(tileRow, tileCol, tileLastPlayed));
 
-            if(rowWin || colWin)
+            if(rowWin || colWin || diagWin)
             {
                 return true;
             }
@@ -126,10 +127,7 @@ namespace XInARow
                 {
                     rowArr[i] = false;
                 }
-                else
-                {
-                    rowArr[i] = true;
-                };
+                else { rowArr[i] = true; };
             }
 
             return rowArr;
@@ -145,13 +143,58 @@ namespace XInARow
                 {
                     colArr[i] = false;
                 }
-                else
-                {
-                    colArr[i] = true;
-                };
+                else { colArr[i] = true; };
             }
 
             return colArr;
+        }
+
+        private bool[] getDiagArray(int row, int col, PictureBox tile)
+        {
+            List<bool> diagListLower = new List<bool>();
+            int lowerRow = row + 1; // adjust to be offset lower than the current tile
+            int lowerCol = col + 1;
+
+            while(lowerCol < gridSize && lowerRow < gridSize)
+            {
+                if (currentStateOfBoard[lowerRow, lowerCol] != (String)tile.Tag)
+                {
+                    diagListLower.Add(false);
+                }
+                else { diagListLower.Add(true); };
+            }
+
+            diagListLower.Reverse();
+
+            List<bool> diagListUpper = new List<bool>();
+            int upperRow = row - 1;
+            int upperCol = col - 1;
+
+            while(upperCol > 0 && upperRow > 0)
+            {
+                if (currentStateOfBoard[upperRow, upperCol] != (String)tile.Tag)
+                {
+                    diagListUpper.Add(false);
+                }
+                else { diagListUpper.Add(true); };
+            }
+
+            bool[] diagArr = new bool[diagListUpper.Count + diagListLower.Count + 1];
+
+            for(var i = 0; i < diagListLower.Count; i++)
+            {
+                diagArr[i] = diagListLower[i];
+            }
+
+            diagArr[diagListLower.Count] = true;
+
+            int index = diagListUpper.Count + 1;
+            for (var i = 0; i < diagListUpper.Count; i++)
+            {
+                diagArr[index] = diagListUpper[i];
+            }
+
+            return diagArr;
         }
 
         private bool getResult(bool[] arr)
@@ -195,12 +238,14 @@ namespace XInARow
 
         private void getCurrentState()
         {
-            int row = 0;
-            int col = 0;
+           // int row = 0;
+           // int col = 0;
 
             for(var tile = 0; tile < allTiles.Count; tile++)
             {
-                if(col >= gridSize) // gridSize = 10
+                currentStateOfBoard[tile / gridSize, tile % gridSize] = (String)allTiles[tile].Tag;
+
+               /* if(col >= gridSize) // gridSize = 10
                 {
                     row++;
                     col = 0;
@@ -211,7 +256,7 @@ namespace XInARow
                 {
                     currentStateOfBoard[row, col] = (String)allTiles[tile].Tag;
                     col++;
-                }
+                }*/
             }
         }
 
