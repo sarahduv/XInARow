@@ -92,8 +92,8 @@ namespace XInARow
             return (
                 getResult(getRowArray(tileRow, tileLastPlayed)) ||
                 getResult(getColArray(tileCol, tileLastPlayed)) ||
-                getResult(getDiagArray(tileRow, tileCol, tileLastPlayed, true)) ||
-                getResult(getDiagArray(tileRow, tileCol, tileLastPlayed, false))
+                getResult(getDiagArray2(tileRow, tileCol, tileLastPlayed, true)) ||
+                getResult(getDiagArray2(tileRow, tileCol, tileLastPlayed, false))
             );
         }
 
@@ -121,7 +121,7 @@ namespace XInARow
             return colArr;
         }
 
-      /*  private bool[] getDiagArray2(int row, int col, PictureBox tile, bool isDownRight)
+        private bool[] getDiagArray2(int row, int col, PictureBox tile, bool isDownRight)
         {
             bool[] diag = new bool[10];
 
@@ -130,15 +130,23 @@ namespace XInARow
             diag[col] = true;
             for (int distance = 1; distance < gridSize; distance++)
             {
-                var rowUp = row - distance;
-                var rowDown = row + distance;
-                var testedCol = col + (distance * colDirection);
+                var ptLeft = isDownRight
+                    ? new RowCol(row - distance, col - distance)
+                    : new RowCol(row + distance, col - distance);
+                var ptRight = !isDownRight
+                    ? new RowCol(row + distance, col + distance)
+                    : new RowCol(row - distance, col + distance);
 
+                if (ptLeft.isValid(gridSize))
+                    diag[ptLeft.Col] = currentStateOfBoard[ptLeft.Row, ptLeft.Col] == (String)tile.Tag; // diag[index to check] --> is the tag here the same as the tile tag?
+                
+                if (ptRight.isValid(gridSize))
+                    diag[ptRight.Col] = currentStateOfBoard[ptRight.Row, ptRight.Col] == (String)tile.Tag;
             }
 
             return diag;
         }
-*/
+
         private bool[] getDiagArray(int row, int col, PictureBox tile, bool isDownRight)
         {
             List<bool> diagListLower = new List<bool>();
@@ -248,6 +256,23 @@ namespace XInARow
                 currentTurnLabel.Text = "Current Turn: ";
                 currentTurnImage.Image = Properties.Resources.x;
             }
+        }
+    }
+
+    class RowCol
+    {
+        public int Row;
+        public int Col;
+
+        public RowCol(int row, int col)
+        {
+            Row = row;
+            Col = col;
+        }
+
+        public bool isValid(int max)
+        {
+            return Row >= 0 && Col >= 0 && Row < max && Col < max;
         }
     }
 }
